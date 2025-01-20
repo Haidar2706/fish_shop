@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин Все Для Рыбалки</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Магазин Все Для Рыбалки</h1>
+        </div>
+        <nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#products">Товары</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Добро пожаловать в наш магазин рыбалов!</h2>
+            <p>Здесь вы найдете все необходимое для успешной рыбалки.</p>
+        </section>
+
+        <section id="products">
+            <h2>Наши Товары</h2>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlJvTtLAbs2bA96yHFLM8CjA_NAioBFfKtlQ&s" alt="Удочка">
+                <h3>Удочки</h3>
+                <p>Качественные удочки для начинающих и профессионалов.</p>
+                <p>Цена: от 350 сом до 10000 сом</p>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq829C0y8oKWsEl_uUjTwNFtrPy8gvUGYhxQ&s" alt="Катушка">
+                <h3>Катушки</h3>
+                <p>Надежные катушки для всех видов рыбалки.</p>
+                <p>Цена: от 250 сом до 10000 сом</p>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqUFYVAXCEsqM3LfV8bUBAdR76Cb9Dd2ehGw&s" alt="Ящик для снастей">
+                <h3>Ящики для снастей</h3>
+                <p>Прочные ящики для хранения всех ваших рыболовных снастей.</p>
+                <p>Цена: от 550 сом до 3000 сом</p>
+            </div>
+            <div class="product">
+                <img src="https://fishing-market.com.ua/image/cache/data/category/silikon-250x250.jpg" alt="Приманка">
+                <h3>Приманка</h3>
+                <p>Эффективная приманка для привлечения рыбы.</p>
+                <p>Цена: от 50 сом до 300 сом за штуку</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Мы - команда энтузиастов рыбалки, предоставляющая лучшие товары для рыбалки.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Свяжитесь с нами по телефону: 996554811558, 996709546687 или по email: hajdarminibaev@gmail.com</p>
+            <p>либо свяжитесь с нами через инстаграм: <a href="https://www.instagram.com/rybolov.janyaryk.karakol" target="_blank">rybolov.janyaryk.karakol</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Магазин Рыболов. Все права защищены.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

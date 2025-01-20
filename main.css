@@ -1,0 +1,215 @@
+/* Общие стили */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: url('https://mayami-club.com/wp-content/uploads/2019/09/vecherutro.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+/* Шапка */
+header {
+  background-color: rgba(0, 128, 128, 0.7); /* Сделан фон полупрозрачным */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateX(10deg);
+}
+
+header .logo h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transform: translateZ(30px); /* 3D-эффект на заголовке */
+}
+
+/* Навигация */
+nav {
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform: perspective(1000px) rotateY(10deg); /* 3D-эффект для навигации */
+}
+
+nav ul li {
+  margin: 0 20px;
+  transition: transform 0.3s ease; /* Плавный переход для элементов меню */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff6347;
+}
+
+nav ul li:hover {
+  transform: scale(1.1) rotateY(10deg); /* 3D-эффект при наведении на элементы меню */
+}
+
+/* Гамбургерное меню */
+nav .menu-toggle {
+  display: none;
+  background-color: #ff6347;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transform: perspective(1000px) rotateX(10deg); /* 3D-эффект на гамбургере */
+}
+
+nav .menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  display: block;
+}
+
+/* Когда меню активно на мобильных устройствах */
+nav.active ul {
+  display: flex;
+  transform: translateY(0);
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 128, 128, 0.7); /* Сделан фон меню полупрозрачным */
+    padding: 20px 0;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav .menu-toggle {
+    display: block;
+  }
+
+  nav.active .menu-toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  nav.active .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  nav.active .menu-toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  header .logo h1 {
+    font-size: 1.8em;
+  }
+}
+
+/* Основной контент */
+main {
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8); /* Сделан фон контента полупрозрачным */
+  border-radius: 10px;
+  margin: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateX(5deg); /* 3D-эффект на основном контенте */
+}
+
+/* Продукты */
+.product {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  transform: perspective(1000px) rotateX(5deg); /* 3D-эффект для продукта */
+}
+
+.product:hover {
+  transform: translateY(-10px) scale(1.05) rotateX(10deg); /* 3D-эффект на продукте при наведении */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product img:hover {
+  transform: scale(1.05);
+}
+
+.product h3 {
+  margin: 15px 0;
+  font-size: 1.5em;
+}
+
+.product p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Подвал */
+footer {
+  background-color: rgba(0, 128, 128, 0.7); /* Сделан фон подвала полупрозрачным */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateX(10deg); /* 3D-эффект на подвал */
+}
+
+/* Мобильная адаптация */
+@media screen and (max-width: 768px) {
+  .product {
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  .product h3 {
+    font-size: 1.3em;
+  }
+
+  .product p {
+    font-size: 1em;
+  }
+}
